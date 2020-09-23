@@ -44,6 +44,7 @@ x64/
 *.svclog
 *.scc
 
+# added by me
 *.sln
 *csproj
 .vs/
