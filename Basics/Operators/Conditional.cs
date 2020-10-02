@@ -36,9 +36,12 @@ namespace Basics {
         }
 
         static void Ternary(int age, string job) {
-            Console.WriteLine((age < 13 && age > 0) ? "You are a child" : 
-                (age < 18) ? "You are a teenager" : 
-                (age < 30) ? "You are a young adult" : "You are OLD!");
+            Console.WriteLine(
+                (age < 13 && age > 0) ? "You are a child" 
+                : (age < 18) ? "You are a teenager" 
+                : (age < 30) ? "You are a young adult" 
+                : "You are OLD!"
+                );
         }
 
     }
