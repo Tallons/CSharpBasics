@@ -7,11 +7,12 @@ namespace Basics {
 
          public static void conditional( int age, string job) {
 
-            basicConditional(age, job);
+            BasicConditional(age, job);
+            Ternary(age, job);
 
         }
 
-        static void basicConditional(int age, string job) {
+        static void BasicConditional(int age, string job) {
             if (age < 0) {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Incorrect Age");
@@ -32,6 +33,12 @@ namespace Basics {
             if (job.ToLower() == "developer") {
                 Console.WriteLine("Great Job Choice!!");
             }
+        }
+
+        static void Ternary(int age, string job) {
+            Console.WriteLine((age < 13 && age > 0) ? "You are a child" : 
+                (age < 18) ? "You are a teenager" : 
+                (age < 30) ? "You are a young adult" : "You are OLD!");
         }
 
     }
