@@ -13,7 +13,6 @@ namespace Challenges.GuessingGame {
 
             while (true) {
                 
-
                 Random random = new Random();
                 int correctNumber = random.Next(1, 11);
                 int guess = 0;
@@ -25,18 +24,21 @@ namespace Challenges.GuessingGame {
 
                 int guessNumber = 1;
                 int[] guessedNumbers = new int[3];
+
                 Console.WriteLine("Please guess a number");
                 while (guess != correctNumber || guessNumber < 3) {
-                    //guess = Int32.Parse(Console.ReadLine());
+
                     string guessInput = Console.ReadLine();
-                    if (!int.TryParse(guessInput, out guess)) {
-                        PrintColorMessage(ConsoleColor.Red, "Please guess an actual number");
-                        continue;
-                    }
-                    guess = int.Parse(guessInput);
+                        if (!int.TryParse(guessInput, out guess)) {
+                            PrintColorMessage(ConsoleColor.Red, "Please guess an actual number");
+                            continue;
+                        }
+                    guess = Int32.Parse(guessInput);
+
                     if (guessedNumbers.Contains(guess) || guess < 1 || guess > 10) {
                         PrintColorMessage(ConsoleColor.Yellow, "WOW!! WE HAVE A VOLENTEER!! CONGRADULATIONS!! YOU WILL BE IN THIS YEAR'S HUNGER GAMES!!!");
                         return;
+
                     } else if (guess != correctNumber && guessNumber < 3) {
                         PrintColorMessage(ConsoleColor.Red, "Unfortunately that is not the right number, try again");
                         guessedNumbers[guessNumber - 1] = guess;
@@ -49,16 +51,16 @@ namespace Challenges.GuessingGame {
                         return;
                     }
                 }
+
                 PrintColorMessage(ConsoleColor.Yellow, "CONGRADULATIONS!! YOU WILL BE IN THIS YEAR'S HUNGER GAMES!!!");
 
                 Console.WriteLine("Would you like to play again? [Y or N]");
                 string answer = Console.ReadLine().ToUpper();
-
-                if (answer == "Y") {
-                    continue;
-                } else {
-                    return;
-                }
+                    if (answer == "Y") {
+                        continue;
+                    } else {
+                        return;
+                    }
             }
         }
 
