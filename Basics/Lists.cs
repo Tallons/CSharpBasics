@@ -10,7 +10,6 @@ namespace CSharpBasics.Basics
 		{
 			List<double> grades = new List<double>() {92.5, 97.6, 82.7};
 			grades.Add(85.0);
-			double firstItem = grades[0];
 
 			var result = 0.0;
 			foreach (var number in grades)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace CSharpBasics.Basics {
@@ -28,5 +29,33 @@ namespace CSharpBasics.Basics {
                     break;
             }
         }
+        public static void MatchingSwitches(int[] nums)
+        {
+
+	        int average = nums.Sum() / nums.Length;
+
+            switch(average) {
+                case var n when n >= 90:
+					// something
+					break; 
+                case var n when n >= 80:
+					// something
+					break;
+                case var n when n >= 70:
+					// something
+					break; 
+                case var n when n >= 60:
+					// something
+					break;
+                case var n when n >= 50:
+					// something
+					break;
+                default:
+	                // something
+                    break;
+            }
+        }
+
+
     }
 }

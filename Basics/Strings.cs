@@ -8,6 +8,8 @@ namespace Basics {
        public static void strings() {
             string job = "Developer";
             string sentence = "My sister ran a marathon.";
+            string doubleQuotes = "The old man said, \"Beat it! or I'll call the brute squad!\" ";
+            string stringLiteral = @"The old man said, ""Beat it! or I'll call the brute squad!""";
 
             char[] letters = { 'h', 'e', 'l', 'l', 'o' };
             CharToString(letters);
@@ -53,8 +55,6 @@ namespace Basics {
             foreach (string word in words) {
                 Console.WriteLine(word);
             }
-            //Console.WriteLine(sentence + " --> remove spaces: " + sentence.Split(' '));
-            //Console.ForegroundColor = ConsoleColor.Yellow;
             Console.ResetColor();
         }
     }

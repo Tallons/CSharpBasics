@@ -67,9 +67,7 @@ namespace Challenges.GuessingGame {
         static string GetGameInfo() {
             string gameName = "Guessing Game";
             string gameVersion = "1.0.0";
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("{0}: Version {1}", gameName, gameVersion);
-            Console.ResetColor();
+            PrintColorMessage(ConsoleColor.Red, $"{gameName}: Version {gameVersion}");
             return gameName;
         }
 

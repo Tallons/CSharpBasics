@@ -6,7 +6,7 @@ namespace CSharpBasics {
     class Program {
         static void Main(string[] args) {
             Basics.Program.main();
-            Challenges.GuessingGame.Program.main();
+            //Challenges.GuessingGame.Program.main();
 
         }
 
